@@ -79,19 +79,7 @@
                     </div>
                 </li>
             </ul>
-            <section class="form">
-                <div class="form__container">
-                    <button class="form__close-button"></button>
-                    <form class="form__popup-form">
-                        <h2 class="form__text">Edit Profile</h2>
-                        <input class="form__input form__input_name" type="text" id="name" name="name"
-                            value="Jacques Cousteau">
-                        <input class="form__input form__input_job" type="text" id="about" name="about-me"
-                            value="Explorer">
-                        <button class="form__button" type="submit" value="Save">Save</button>
-                    </form>
-                </div>
-            </section>
+
 
         </main>
         <footer class="footer">
@@ -101,7 +89,18 @@
     </div>
     <script src="index.js"></script>
 
-
+    <section class="modal">
+        <div class="modal__container">
+            <button class="modal__close-button"></button>
+            <form class="modal__popup-form">
+                <h2 class="modal__text">Edit Profile</h2>
+                <input class="modal__input modal__input_name" type="text" id="name" name="name"
+                    value="Jacques Cousteau">
+                <input class="modal__input modal__input_job" type="text" id="about" name="about-me" value="Explorer">
+                <button class="modal__button" type="submit" value="Save">Save</button>
+            </form>
+        </div>
+    </section>
 </body>
 
 </html>

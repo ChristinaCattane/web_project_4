@@ -1,0 +1,22 @@
+@import url(./_active/modal__container_active.css);
+
+.modal__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  width: 100%;
+}
+.modal__container::after{
+  content: "";
+  position: fixed;
+  z-index: 2;
+  background-color: black;
+  opacity: .5;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
