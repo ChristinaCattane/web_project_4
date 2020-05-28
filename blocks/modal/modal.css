@@ -5,7 +5,9 @@
 @import url(./__popup-form/modal__popup-form.css);
 @import url(./__text/form__text.css);
 @import url(./__container/_active/modal__container_active.css);
-@import url(./__visible/modal__visible.css);
+
+
+
 .modal {
     position: fixed;
     top: 0;
