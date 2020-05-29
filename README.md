@@ -1,16 +1,21 @@
 # Project 4: Around The U.S.
 
-### Overview
+In project 4 we began to learn JavaScript. Some of the things we learned were:
 
-* Figma
-* Images
+* Numbers, Mathematical Operation, strings, concatenation, and converting numbers into strings 
 
-**Figma**
+* Markup, console log(), variables and variable types, Arrays, and loops
 
-* [Link to the project in Figma](https://www.figma.com/file/mUgu8OSHWE0M6p6vfwmdu9/Sprint-4-Around-The-U.S.-desktop-mobile?node-id=0%3A1)
+* Declaring and calling functions
 
-**Images**
+* DOM, selecting and working with attributes and methods involving attributs
 
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
+* How to make a popup edit button to edit information on the page.
 
-Have fun with JavaScript!
+# Website
+
+The link to my website is https://christinacattane.github.io/web_project_4/.
+
+# Future
+
+Looking forward to learning more about JavaScript
