@@ -8,7 +8,7 @@ In project 4 we began to learn JavaScript. Some of the things we learned were:
 
 * Declaring and calling functions
 
-* DOM, selecting and working with attributes and methods involving attributs
+* DOM, selecting and working with attributes and methods involving attributes
 
 * How to make a popup edit button to edit information on the page.
 
