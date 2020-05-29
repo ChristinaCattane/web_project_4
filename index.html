@@ -8,98 +8,99 @@
     <title>Around the U.S.</title>
 </head>
 
-<body class="root">
-    <div class="page">
-        <header class="header">
-            <img class="header__logo" src="./images/Vector1.png" alt="Around the U.S. logo">
-        </header>
-        <main class=" content">
-            <section class="profile">
-                <div class="profile__avatar">
-                    <img class="profile__avatar-image" src="images/image.jpg" alt="profile picture">
+<body class="page">
+
+    <header class="header">
+        <img class="header__logo" src="./images/Vector1.png" alt="Around the U.S. logo">
+    </header>
+    <main class=" content">
+        <section class="profile">
+            <div class="profile__avatar">
+                <img class="profile__avatar-image" src="images/image.jpg" alt="profile picture">
+            </div>
+            <div class="profile__info">
+                <div class="profile__info-row">
+                    <h1 class="profile__name">Jacques Cousteau</h1>
+                    <button class="profile__edit-button"></button>
                 </div>
-                <div class="profile__info">
-                    <div class="profile__info-row">
-                        <h1 class="profile__name">Jacques Cousteau</h1>
-                        <button class="profile__edit-button"></button>
-                    </div>
-                    <p class="profile__job">Explorer</p>
+                <p class="profile__job">Explorer</p>
+            </div>
+            <button class="profile__add-button"></button>
+
+        </section>
+        <ul class="elements">
+            <li class="element">
+                <img class="element__img" src="./images/kirill-pershin-river-unsplash.jpg"
+                    alt="River in Yosemite Valley">
+                <div class="element__info">
+                    <h3 class="element__title">Yosemite Valley</h3>
+                    <img class="element__heart" src="images/Vector.png" alt="heart">
+
                 </div>
-                <button class="profile__add-button"></button>
+            </li>
+            <li class="element">
+                <img class="element__img" src="./images/kirill-pershin-1556355-unsplash.png" alt="Mountain Lake">
+                <div class="element__info">
+                    <h3 class="element__title">Lake Louise</h3>
+                    <img class="element__heart" src="images/Vector.png" alt="heart">
 
-            </section>
-            <ul class="elements">
-                <li class="element">
-                    <img class="element__img" src="./images/kirill-pershin-river-unsplash.jpg"
-                        alt="River in Yosemite Valley">
-                    <div class="element__info">
-                        <h3 class="element__title">Yosemite Valley</h3>
-                        <img class="element__heart" src="images/Vector.png" alt="heart">
+                </div>
+            </li>
+            <li class="element">
+                <img class="element__img" src="./images/kirill-pershin-15563551-unsplash.png" alt="">
+                <div class="element__info">
+                    <h3 class="element__title">Bald Mountains</h3>
+                    <img class="element__heart" src="images/Vector.png" alt="heart">
 
-                    </div>
-                </li>
-                <li class="element">
-                    <img class="element__img" src="./images/kirill-pershin-1556355-unsplash.png" alt="Mountain Lake">
-                    <div class="element__info">
-                        <h3 class="element__title">Lake Louise</h3>
-                        <img class="element__heart" src="images/Vector.png" alt="heart">
+                </div>
+            </li>
+            <li class="element">
+                <img class="element__img" src="./images/kirill-pershin-1404681-unsplash.png" alt="">
+                <div class="element__info">
+                    <h3 class="element__title">Latemar</h3>
+                    <img class="element__heart" src="images/Vector.png" alt="heart">
 
-                    </div>
-                </li>
-                <li class="element">
-                    <img class="element__img" src="./images/kirill-pershin-15563551-unsplash.png" alt="">
-                    <div class="element__info">
-                        <h3 class="element__title">Bald Mountains</h3>
-                        <img class="element__heart" src="images/Vector.png" alt="heart">
+                </div>
+            </li>
+            <li class="element">
+                <img class="element__img" src="./images/kirill-pershin-14046811-unsplash.png" alt="">
+                <div class="element__info">
+                    <h3 class="element__title">Vanois National...</h3>
+                    <img class="element__heart" src="images/Vector.png" alt="heart">
 
-                    </div>
-                </li>
-                <li class="element">
-                    <img class="element__img" src="./images/kirill-pershin-1404681-unsplash.png" alt="">
-                    <div class="element__info">
-                        <h3 class="element__title">Latemar</h3>
-                        <img class="element__heart" src="images/Vector.png" alt="heart">
+                </div>
+            </li>
+            <li class="element">
+                <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="">
+                <div class="element__info">
+                    <h3 class="element__title">Lago di Braies</h3>
+                    <img class="element__heart" src="images/Vector.png" alt="heart">
 
-                    </div>
-                </li>
-                <li class="element">
-                    <img class="element__img" src="./images/kirill-pershin-14046811-unsplash.png" alt="">
-                    <div class="element__info">
-                        <h3 class="element__title">Vanois National...</h3>
-                        <img class="element__heart" src="images/Vector.png" alt="heart">
+                </div>
+            </li>
+        </ul>
 
-                    </div>
-                </li>
-                <li class="element">
-                    <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="">
-                    <div class="element__info">
-                        <h3 class="element__title">Lago di Braies</h3>
-                        <img class="element__heart" src="images/Vector.png" alt="heart">
+        <div class="modal modal__active">
+            <div class="modal__container">
 
-                    </div>
-                </li>
-            </ul>
+                <form action="#" class="modal__popup-form">
+                    <button class="modal__close-button"></button>
+                    <h2 class="modal__text">Edit Profile</h2>
+                    <input class="modal__input modal__input_name" type="text" name="name" value="Jacques Cousteau">
+                    <input class="modal__input modal__input_job" type="text" name="about-me" value="Explorer">
+                    <button class="modal__button" type="submit" value="Save">Save</button>
+                </form>
 
-
-        </main>
-        <footer class="footer">
-            <p class="footer__copyright">© 2020 Around The U.S.</p>
-
-        </footer>
-    </div>
-
-
-    <div class="modal">
-        <div class="modal__container">
-            <button class="modal__close-button"></button>
-            <form action="#" class="modal__popup-form">
-                <h2 class="modal__text">Edit Profile</h2>
-                <input class="modal__input modal__input_name" type="text" name="name" value="Jacques Cousteau">
-                <input class="modal__input modal__input_job" type="text" name="about-me" value="Explorer">
-                <button class="modal__button" type="submit" value="Save">Save</button>
-            </form>
+            </div>
         </div>
-    </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__copyright">© 2020 Around The U.S.</p>
+
+    </footer>
+
+
+
     <script src="index.js"></script>
 </body>
 
