@@ -1,6 +1,7 @@
 
 .modal__close-button {
-    background-image: url(../../../images/Close-Icon.png);
+    background-image: url(../../../images/Close-Icon-white.png);
+     position: absolute;
     background-color: transparent;
     color: white;
     margin: 0;
@@ -11,12 +12,12 @@
     background-position: center;
     grid-column: 2;
     align-self: end;
-    width: 40px;
-    height: 40px;
     transition: opacity .5s ease-in-out;
     z-index: 10;
-    position: relative;
-}
+  top: -35px;
+  right: -35px;
+  width: 40px;
+  height: 40px;
 
 @media screen and (max-width: 425px) {
  .modal__close-button {
