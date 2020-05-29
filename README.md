@@ -2,7 +2,7 @@
 
 In project 4 we began to learn JavaScript. Some of the things we learned were:
 
-* Numbers, Mathematical Operation, strings, concatenation, and converting numbers into strings 
+* Numbers, Mathematical Operations, strings, concatenation, and converting numbers into strings 
 
 * Markup, console log(), variables and variable types, Arrays, and loops
 
