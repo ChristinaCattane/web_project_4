@@ -8,15 +8,20 @@
     padding: 0;
 }
 
-@media screen and (max-width: 890px) {
-    .elements {
-        width: calc(100% - 40px);
+@media screen and (max-width: 900px) {
+  .elements {
+    grid-template-columns: repeat(2, 282px);
+    grid-template-rows: repeat(3, 361px);
+    justify-content: center;
     }
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 600px) {
     .elements {
-        grid-template-columns: repeat(2, 1fr);
+       grid-template-columns: repeat(1, 282px);
+        grid-template-rows: repeat(6, 361px);
+        justify-content: center;
+  }
     }
 }
 

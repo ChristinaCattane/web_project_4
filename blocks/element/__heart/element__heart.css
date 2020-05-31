@@ -6,6 +6,8 @@
     height: 18px;
     align-self: center;
     padding: 0;
+    cursor: pointer;
     border: none;
     background-color: #ffffff;
+    background-image: url(../../../images/Vectorheart.svg);
 }

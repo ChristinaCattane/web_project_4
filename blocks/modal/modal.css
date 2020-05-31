@@ -1,9 +1,7 @@
 
 @import url(./__container/modal__container.css);
-@import url(./__container/_active/modal__container_active.css);
 @import url(./__button/modal__button.css);
 @import url(./__close-button/modal__close-button.css);
-
 @import url(./__input/modal__input.css);
 @import url(./__popup-form/modal__popup-form.css);
 @import url(./__text/modal__text.css);
