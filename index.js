@@ -10,22 +10,18 @@ const save = document.querySelector(".modal__button")
 
 
 function toggleModal() {
-    modal.classList.toggle("modal-visible");
+    modal.classList.toggle("modal--visible");
+    inputName.value = profileName.textContent
+    inputJob.value = profileJob.textContent
 }
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     profileName.textContent = inputName.value
     profileJob.textContent = inputJob.value
-
+    toggleModal()
 })
-function updateProfile(e) {
-    e.preventDefault();
-    profileName.textContent = inputName.value;
-    profileJob.textContent = inputJob.value;
-    toggleModal();
-}
-save.addEventListener("click", toggleModal);
+
 editButton.addEventListener("click", toggleModal);
 modalCloseButton.addEventListener("click", toggleModal);
 
