@@ -10,7 +10,7 @@ const save = document.querySelector(".modal__button")
 
 
 function toggleModal() {
-    modal.classList.toggle("modal--visible");
+    modal.classList.toggle("modal_visible");
     inputName.value = profileName.textContent
     inputJob.value = profileJob.textContent
 }
