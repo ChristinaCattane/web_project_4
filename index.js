@@ -11,7 +11,7 @@ const save = document.querySelector(".modal__button")
 
 
 function toggleModal() {
-    modal.classList.toggle("modal_visible");
+    modal.classList.toggle(".modal_visible");
     inputName.value = profileName.textContent
     inputJob.value = profileJob.textContent
 }
@@ -59,16 +59,16 @@ const cardTemplate = document.querySelector('.card-template').content.querySelec
 
 
 const createCard = (data) => {
-    const cardElement =cardTemplate.clonenode(true);
+    const cardElement = cardTemplate.cloneNode(true);
 
-    const cardTitle = cardElement.querySelector('element__title');
-    const cardImage = cardElement.querySelector('element__img');
-    const cardLikeButton = cardElement.querySelector('element__heart');
-    const cardRemoveButton =cardElement.querySelector('element__remove-button');
+    const cardTitle = cardElement.querySelector('.element__title');
+    const cardImage = cardElement.querySelector('.element__img');
+    const cardLikeButton = cardElement.querySelector('.element__heart');
+    const cardRemoveButton =cardElement.querySelector('.element__remove-button');
   
   
   cardTitle.textContent = data.name;
-  cardImage.stye.backgroundImage = `url(${data.link})`;
+  cardImage.style.backgroundImage = `url(${data.link})`;
   
   cardLikeButton.addEventListener('click', () => {
     //changeHeartColor()
