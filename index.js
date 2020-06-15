@@ -1,30 +1,45 @@
 const editButton = document.querySelector(".profile__edit-button");
-const modalCloseButton = document.querySelector(".modal__close-button");
+
 const modal = document.querySelector(".modal");
 const form = document.querySelector(".modal__popup-form");
 const inputName = document.querySelector(".modal__input_type_name");
 const inputJob = document.querySelector(".modal__input_type_job");
 const profileName = document.querySelector(".profile__name");
 const profileJob = document.querySelector(".profile__job");
-const save = document.querySelector(".modal__button")
+const save = document.querySelector(".modal__button");
+const editProfileWindow = document.querySelector(".modal_type_edit-profile");
+const addCardModalWindow = document.querySelector(".modal_type_add-card");
 
+const editCloseButton = editProfileWindow.querySelector(".modal__close-button");
+const addCloseButton = addCardModalWindow.querySelector(".modal__close-button");
 
+const addButton = document.querySelector(".profile__add-button");
+addButton.addEventListener('click', () => {
+    toggleModal(addCardModalWindow);
+})
+addCloseButton.addEventListener("click", toggleModal);
 
-function toggleModal() {
+editButton.addEventListener("click", () => {
+    toggleModal(editProfileWindow);
+})
+editCloseButton.addEventListener("click", toggleModal);
+
+function toggleModal(modal) {
     modal.classList.toggle(".modal_visible");
     inputName.value = profileName.textContent
     inputJob.value = profileJob.textContent
 }
-form.addEventListener("submit", (e) => {
+/*form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     profileName.textContent = inputName.value
     profileJob.textContent = inputJob.value
     toggleModal()
-})
+})*/
 
-editButton.addEventListener("click", toggleModal);
-modalCloseButton.addEventListener("click", toggleModal);
+
+
+
 
 const initialCards = [
     {
@@ -101,7 +116,6 @@ initialCards.forEach((data) => {
     renderCard(data);
 
 })
-
 
 
 
