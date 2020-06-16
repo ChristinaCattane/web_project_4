@@ -25,7 +25,7 @@ editButton.addEventListener("click", () => {
 editCloseButton.addEventListener("click", toggleModal);
 
 function toggleModal(modal) {
-    modal.classList.toggle(".modal_visible");
+    modal.classList.toggle("modal_visible");
     inputName.value = profileName.textContent
     inputJob.value = profileJob.textContent
 }
