@@ -2,6 +2,8 @@
 @import url(./__img/element__img.css);
 @import url(./__info/element__info.css);
 @import url(./__title/element__title.css);
+@import url(./__remove-button/element__remove-button.css);
+@import url(./heart_active/element__heart-active.css);
 
 .element {
     display: flex;

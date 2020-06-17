@@ -1,0 +1,16 @@
+.element__remove-button {
+    background-image: url('../../../images/recycle.svg');
+    background-color: transparent;
+    border: none;
+    background-size: 19px;
+    height: 19px;
+    width: 19px;
+    position: absolute;
+    top: 19px;
+    right: 15px;
+}
+
+.element__remove-button:hover {
+    cursor: pointer;
+    opacity: .6;
+}
