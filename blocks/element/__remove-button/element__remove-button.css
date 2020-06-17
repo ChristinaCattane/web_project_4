@@ -16,7 +16,7 @@
     z-index: 1;
     text-decoration: none;
     cursor: pointer;
-    background-image: url(../../../images/trash.svg);
+    background-image: url('../../../images/trash.svg');
     background-size: contain;
     width: 18px;
     height: 19px;
