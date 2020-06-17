@@ -1,34 +1,51 @@
 const editButton = document.querySelector(".profile__edit-button");
 
-const modal = document.querySelector(".modal");
-const editForm = document.querySelector(".modal__popup-form");
-const cardForm = document.querySelector(".modal__popup-card")
-const inputName = document.querySelector(".modal__input_type_name");
-const inputJob = document.querySelector(".modal__input_type_job");
+//  I have found two modals
+const editProfileModal = document.querySelector(".modal_type_edit-profile");
+const addCardModal = document.querySelector(".modal_type_add-card");
+const imageModalWindow = document.querySelector(".modal_type_image");
+
+// I have found forms inside modals above
+const editForm = editProfileModal.querySelector(".modal__popup-form");
+const cardForm = addCardModal.querySelector(".modal__popup-form")
+
+// found save buttons inside forms (not inside document)
+const saveEditButton = editForm.querySelector(".modal__button");
+const saveAddCardButton = cardForm.querySelector(".modal__button");
+
+// close buttons inside modals
+const editCloseButton = editProfileModal.querySelector(".modal__close-button");
+const addCloseButton = addCardModal.querySelector(".modal__close-button");
+
+// find inputs inside  edit profile form
+const inputName = editForm.querySelector(".modal__input_type_name");
+const inputJob = editForm.querySelector(".modal__input_type_job");
+// find info spans
 const profileName = document.querySelector(".profile__name");
 const profileJob = document.querySelector(".profile__job");
-const save = document.querySelector(".modal__button");
-const editProfileWindow = document.querySelector(".modal_type_edit-profile");
-const addCardModalWindow = document.querySelector(".modal_type_add-card");
-const imageModalWindow = document.querySelector(".modal_type_image");
-const closeCardImage = document.querySelector(".modal__image-close")
-const editCloseButton = editProfileWindow.querySelector(".modal__close-button");
-const addCloseButton = addCardModalWindow.querySelector(".modal__close-button");
+
+// find inputs inside  add card from
+const inputPlaceName = cardForm.querySelector(".modal__input_type_card-name");
+const inputImageLink = cardForm.querySelector(".modal__input_type_url");
+
+
+
 
 const addButton = document.querySelector(".profile__add-button");
 
 addButton.addEventListener('click', () => {
-    toggleModal(addCardModalWindow);
+    // I close 
+    toggleModal(addCardModal);
 })
 addCloseButton.addEventListener("click", () => {
-    toggleModal(addCardModalWindow);
+    toggleModal(addCardModal);
 })
 
 editButton.addEventListener("click", () => {
-    toggleModal(editProfileWindow);
+    toggleModal(editProfileModal);
 })
 editCloseButton.addEventListener("click", () => {
-    toggleModal(editProfileWindow);
+    toggleModal(editProfileModal);
 })
 
 function toggleModal(modal) {
@@ -40,17 +57,14 @@ editForm.addEventListener("submit", (e) => {
     e.preventDefault();
     profileName.textContent = inputName.value
     profileJob.textContent = inputJob.value
-    toggleModal(editProfileWindow);
+    toggleModal(editProfileModal);
 })
 cardForm.addEventListener("submit", (e) => {
     e.preventDefault()
-    const data = {name: cardTitle.value, link: cardlink.value};
+    const data = {name: inputPlaceName.value, link: inputImageLink.value};
     renderCard(data);
-    toggleModal(addCardModalWindow);
-
+    toggleModal(addCardModal);
 })
-
-
 
 
 
@@ -87,39 +101,37 @@ const cardTemplate = document.querySelector('.card-template').content.querySelec
 
 
 const createCard = (data) => {
-    
     const cardElement = cardTemplate.cloneNode(true);
-
     const cardTitle = cardElement.querySelector('.element__title');
     const cardImage = cardElement.querySelector('.element__img');
     const cardLikeButton = cardElement.querySelector('.element__heart');
-    const cardRemoveButton =cardElement.querySelector('.element__remove-button');
-  
-  
-  cardTitle.textContent = data.name;
-  cardImage.style.backgroundImage = `url(${data.link})`;
-  cardImage.style.backgroundSize = "cover";
-  cardImage.style.minHeight = "282px";
-  
-  cardLikeButton.addEventListener('click', () => {
-    //changeHeartColor()
-    cardLikeButton.classList.toggle("element__heart_active");
-  })
-  
-  cardRemoveButton.addEventListener('click', () => {
-      //RemoveCard
-      e.target.closest(".element").remove();
-  })
-  
-  cardImage.addEventListener('click', () => {
-      //openModal
-      toggleModal(element__img);
-  })
-  closeCardImage.addEventListener('click', () => {
-      toggleModal(element__img);
-  })
-  
-  return cardElement;
+    const cardRemoveButton = cardElement.querySelector('.element__remove-button');
+
+
+    cardTitle.textContent = data.name;
+    cardImage.style.backgroundImage = `url(${data.link})`;
+    cardImage.style.backgroundSize = "cover";
+    cardImage.style.minHeight = "282px";
+
+    cardLikeButton.addEventListener('click', () => {
+        //changeHeartColor()
+        cardLikeButton.classList.toggle("element__heart-active");
+    })
+
+    cardRemoveButton.addEventListener('click', (e) => {
+        //RemoveCard
+        e.target.closest(".element").remove();
+    })
+
+    cardImage.addEventListener('click', () => {
+        //openModal
+        toggleModal(element__img);
+    })
+    //   closeCardImage.addEventListener('click', () => {
+    //       toggleModal(element__img);
+    //   })
+
+    return cardElement;
 }
 
 const list = document.querySelector('.elements');
@@ -129,10 +141,8 @@ const renderCard = (data) => {
     list.prepend(createCard(data));
 }
 
-
-
 initialCards.forEach((data) => {
     renderCard(data);
-
 })
+
 
