@@ -11,7 +11,7 @@ const save = document.querySelector(".modal__button");
 const editProfileWindow = document.querySelector(".modal_type_edit-profile");
 const addCardModalWindow = document.querySelector(".modal_type_add-card");
 const imageModalWindow = document.querySelector(".modal_type_image");
-
+const closeCardImage = document.querySelector(".modal__image-close")
 const editCloseButton = editProfileWindow.querySelector(".modal__close-button");
 const addCloseButton = addCardModalWindow.querySelector(".modal__close-button");
 
