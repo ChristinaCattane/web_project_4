@@ -1,7 +1,8 @@
 const editButton = document.querySelector(".profile__edit-button");
 
 const modal = document.querySelector(".modal");
-const form = document.querySelector(".modal__popup-form");
+const editForm = document.querySelector(".modal__popup-form");
+const cardForm = document.querySelector(".modal__popup-card")
 const inputName = document.querySelector(".modal__input_type_name");
 const inputJob = document.querySelector(".modal__input_type_job");
 const profileName = document.querySelector(".profile__name");
@@ -9,33 +10,45 @@ const profileJob = document.querySelector(".profile__job");
 const save = document.querySelector(".modal__button");
 const editProfileWindow = document.querySelector(".modal_type_edit-profile");
 const addCardModalWindow = document.querySelector(".modal_type_add-card");
-
+const imageModalWindow = document.querySelector(".modal_type_image");
+const closeCardImage = document.querySelector(".modal__image-close")
 const editCloseButton = editProfileWindow.querySelector(".modal__close-button");
 const addCloseButton = addCardModalWindow.querySelector(".modal__close-button");
 
 const addButton = document.querySelector(".profile__add-button");
+
 addButton.addEventListener('click', () => {
     toggleModal(addCardModalWindow);
 })
-addCloseButton.addEventListener("click", toggleModal);
+addCloseButton.addEventListener("click", () => {
+    toggleModal(addCardModalWindow);
+})
 
 editButton.addEventListener("click", () => {
     toggleModal(editProfileWindow);
 })
-editCloseButton.addEventListener("click", toggleModal);
+editCloseButton.addEventListener("click", () => {
+    toggleModal(editProfileWindow);
+})
 
 function toggleModal(modal) {
     modal.classList.toggle("modal_visible");
     inputName.value = profileName.textContent
     inputJob.value = profileJob.textContent
 }
-/*form.addEventListener("submit", (e) => {
+editForm.addEventListener("submit", (e) => {
     e.preventDefault();
-
     profileName.textContent = inputName.value
     profileJob.textContent = inputJob.value
-    toggleModal()
-})*/
+    toggleModal(editProfileWindow);
+})
+cardForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    const data = {name: cardTitle.value, link: cardlink.value};
+    renderCard(data);
+    toggleModal(addCardModalWindow);
+
+})
 
 
 
@@ -90,14 +103,20 @@ const createCard = (data) => {
   
   cardLikeButton.addEventListener('click', () => {
     //changeHeartColor()
+    cardLikeButton.classList.toggle("element__heart_active");
   })
   
   cardRemoveButton.addEventListener('click', () => {
       //RemoveCard
+      e.target.closest(".element").remove();
   })
   
   cardImage.addEventListener('click', () => {
-      //openModul
+      //openModal
+      toggleModal(element__img);
+  })
+  closeCardImage.addEventListener('click', () => {
+      toggleModal(element);
   })
   
   return cardElement;
@@ -116,6 +135,4 @@ initialCards.forEach((data) => {
     renderCard(data);
 
 })
-
-
 
