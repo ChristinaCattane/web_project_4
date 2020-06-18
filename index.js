@@ -16,6 +16,7 @@ const saveAddCardButton = cardForm.querySelector(".modal__button");
 // close buttons inside modals
 const editCloseButton = editProfileModal.querySelector(".modal__close-button");
 const addCloseButton = addCardModal.querySelector(".modal__close-button");
+const imageCloseButton = imageModalWindow.querySelector(".modal__close-button")
 
 // find inputs inside  edit profile form
 const inputName = editForm.querySelector(".modal__input_type_name");
@@ -125,11 +126,11 @@ const createCard = (data) => {
 
     cardImage.addEventListener('click', () => {
         //openModal
-        toggleModal(element__img);
+        toggleModal(imageModalWindow);
     })
-    //   closeCardImage.addEventListener('click', () => {
-    //       toggleModal(element__img);
-    //   })
+    imageCloseButton.addEventListener('click', () => {
+          toggleModal(imageModalWindow);
+     })
 
     return cardElement;
 }
