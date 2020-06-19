@@ -29,6 +29,9 @@ const profileJob = document.querySelector(".profile__job");
 const inputPlaceName = cardForm.querySelector(".modal__input_type_card-name");
 const inputImageLink = cardForm.querySelector(".modal__input_type_url");
 
+//find inputs inside image popout
+const popoutImage = imageModalWindow.querySelector(".image__popout");
+const popoutTitle = imageModalWindow.querySelector(".image__popout-title");
 
 
 
@@ -48,6 +51,10 @@ editButton.addEventListener("click", () => {
 editCloseButton.addEventListener("click", () => {
     toggleModal(editProfileModal);
 })
+imageCloseButton.addEventListener('click', () => {
+    toggleModal(imageModalWindow);
+})
+
 
 function toggleModal(modal) {
     modal.classList.toggle("modal_visible");
@@ -125,13 +132,13 @@ const createCard = (data) => {
     })
 
     cardImage.addEventListener('click', () => {
-        //openModal
+       /* popoutImage.src = image;
+        popoutImage.alt = title;
+        popoutTitle.textContent = title;*/
+
         toggleModal(imageModalWindow);
     })
-    imageCloseButton.addEventListener('click', () => {
-          toggleModal(imageModalWindow);
-     })
-
+  
     return cardElement;
 }
 
