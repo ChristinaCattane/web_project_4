@@ -131,10 +131,10 @@ const createCard = (data) => {
         e.target.closest(".element").remove();
     })
 
-    cardImage.addEventListener('click', () => {
-       /* popoutImage.src = image;
-        popoutImage.alt = title;
-        popoutTitle.textContent = title;*/
+    cardImage.addEventListener('click', (e) => {
+        popoutImage.src = e.target.src;
+        popoutImage.alt = e.target.alt;
+        popoutTitle.textContent = e.target.alt;
 
         toggleModal(imageModalWindow);
     })
