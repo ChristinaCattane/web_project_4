@@ -30,7 +30,7 @@ const inputPlaceName = cardForm.querySelector(".modal__input_type_card-name");
 const inputImageLink = cardForm.querySelector(".modal__input_type_url");
 
 //find inputs inside image popout
-const popoutImage = imageModalWindow.querySelector(".image__popout");
+const popoutImage = imageModalWindow.querySelector(".image__popout-image");
 const popoutTitle = imageModalWindow.querySelector(".image__popout-title");
 
 
@@ -132,9 +132,11 @@ const createCard = (data) => {
     })
 
     cardImage.addEventListener('click', (e) => {
-        popoutImage.src = e.target.src;
-        popoutImage.alt = e.target.alt;
-        popoutTitle.textContent = e.target.alt;
+        console.log(popoutImage, e.target.style);
+        
+        popoutImage.src = data.link;
+        popoutImage.alt = data.name;
+        popoutTitle.textContent = data.name;
 
         toggleModal(imageModalWindow);
     })
