@@ -12,6 +12,14 @@ In project 4 we began to learn JavaScript. Some of the things we learned were:
 
 * How to make a popup edit button to edit information on the page.
 
+* Made a modal for adding images
+
+* Made the image popout
+
+* created a working trash button and like button
+
+* created smooth transitions
+
 # Website
 
 The link to my website is https://christinacattane.github.io/web_project_4/.
