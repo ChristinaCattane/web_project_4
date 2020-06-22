@@ -6,8 +6,9 @@
   align-items: center;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  max-width: 75vw;
+  max-height: 75vh;
+  position: relative;
 }
 .modal__container::after{
   content: "";

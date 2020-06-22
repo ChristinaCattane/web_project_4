@@ -128,6 +128,7 @@ const createCard = (data) => {
 
     cardRemoveButton.addEventListener('click', (e) => {
         //RemoveCard
+        e.stopPropagation();
         e.target.closest(".element").remove();
     })
 
