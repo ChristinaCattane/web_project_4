@@ -5,7 +5,7 @@
 @import url(./__input/modal__input.css);
 @import url(./__popup-form/modal__popup-form.css);
 @import url(./__text/modal__text.css);
-
+@import url(./__container/_theme-transparent.css/);
 @import url(./_type_image/modal_type_image.css);
 
 
