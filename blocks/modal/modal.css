@@ -11,7 +11,7 @@
 
 
 .modal {
-    display: none;
+    display: flex;
     position: fixed;
     align-items: center;
     justify-content: center;
@@ -22,4 +22,8 @@
     left: 0;
     top: 0;
     overflow: auto;
+    transition: visibility 3s, opacity .5s;
+    visibility: hidden;
+    opacity: 0;
 }
+
