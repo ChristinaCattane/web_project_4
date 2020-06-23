@@ -32,6 +32,7 @@ const popoutTitle = imageModalWindow.querySelector(".image__popout-title");
 
 
 const addButton = document.querySelector(".profile__add-button");
+const list = document.querySelector('.elements');
 
 function toggleModal(modal) {
     modal.classList.toggle("modal_visible");
@@ -109,8 +110,6 @@ const initialCards = [
 
 const cardTemplate = document.querySelector('.card-template').content.querySelector('.element');
 
-
-
 const createCard = (data) => {
     const cardElement = cardTemplate.cloneNode(true);
     const cardTitle = cardElement.querySelector('.element__title');
@@ -134,7 +133,7 @@ const createCard = (data) => {
         e.target.closest(".element").remove();
     })
 
-    cardImage.addEventListener('click', (e) => {
+    cardImage.addEventListener('click', () => {
     
         
         popoutImage.src = data.link;
@@ -146,10 +145,6 @@ const createCard = (data) => {
   
     return cardElement;
 }
-
-const list = document.querySelector('.elements');
-
-
 
 initialCards.forEach((data) => {
     renderCard(data);
