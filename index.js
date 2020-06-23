@@ -7,11 +7,7 @@ const imageModalWindow = document.querySelector(".modal_type_image");
 
 // I have found forms inside modals above
 const editForm = editProfileModal.querySelector(".modal__popup-form");
-const cardForm = addCardModal.querySelector(".modal__popup-form")
-
-// found save buttons inside forms (not inside document)
-const saveEditButton = editForm.querySelector(".modal__button");
-const saveAddCardButton = cardForm.querySelector(".modal__button");
+const cardForm = addCardModal.querySelector(".modal__popup-form");
 
 // close buttons inside modals
 const editCloseButton = editProfileModal.querySelector(".modal__close-button");
@@ -37,6 +33,12 @@ const popoutTitle = imageModalWindow.querySelector(".image__popout-title");
 
 const addButton = document.querySelector(".profile__add-button");
 
+function toggleModal(modal) {
+    modal.classList.toggle("modal_visible");
+    inputName.value = profileName.textContent
+    inputJob.value = profileJob.textContent
+}
+
 addButton.addEventListener('click', () => {
     // I close 
     toggleModal(addCardModal);
@@ -56,17 +58,18 @@ imageCloseButton.addEventListener('click', () => {
 })
 
 
-function toggleModal(modal) {
-    modal.classList.toggle("modal_visible");
-    inputName.value = profileName.textContent
-    inputJob.value = profileJob.textContent
-}
+
 editForm.addEventListener("submit", (e) => {
     e.preventDefault();
     profileName.textContent = inputName.value
     profileJob.textContent = inputJob.value
     toggleModal(editProfileModal);
 })
+
+const renderCard = (data) => {
+    list.prepend(createCard(data));
+}
+
 cardForm.addEventListener("submit", (e) => {
     e.preventDefault()
     const data = {name: inputPlaceName.value, link: inputImageLink.value};
@@ -118,9 +121,8 @@ const createCard = (data) => {
 
     cardTitle.textContent = data.name;
     cardImage.style.backgroundImage = `url(${data.link})`;
-    cardImage.style.backgroundSize = "cover";
-    cardImage.style.minHeight = "282px";
-
+    
+    
     cardLikeButton.addEventListener('click', () => {
         //changeHeartColor()
         cardLikeButton.classList.toggle("element__heart-active");
@@ -133,7 +135,7 @@ const createCard = (data) => {
     })
 
     cardImage.addEventListener('click', (e) => {
-        console.log(popoutImage, e.target.style);
+    
         
         popoutImage.src = data.link;
         popoutImage.alt = data.name;
@@ -148,9 +150,6 @@ const createCard = (data) => {
 const list = document.querySelector('.elements');
 
 
-const renderCard = (data) => {
-    list.prepend(createCard(data));
-}
 
 initialCards.forEach((data) => {
     renderCard(data);
