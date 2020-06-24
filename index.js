@@ -32,7 +32,7 @@ const popoutTitle = imageModalWindow.querySelector(".image__popout-title");
 
 
 const addButton = document.querySelector(".profile__add-button");
-const list = document.querySelector('.elements');
+
 
 function toggleModal(modal) {
     modal.classList.toggle("modal_visible");
@@ -67,9 +67,6 @@ editForm.addEventListener("submit", (e) => {
     toggleModal(editProfileModal);
 })
 
-const renderCard = (data) => {
-    list.prepend(createCard(data));
-}
 
 cardForm.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -145,7 +142,10 @@ const createCard = (data) => {
   
     return cardElement;
 }
-
+const list = document.querySelector('.elements');
+const renderCard = (data) => {
+    list.prepend(createCard(data));
+}
 initialCards.forEach((data) => {
     renderCard(data);
 })
